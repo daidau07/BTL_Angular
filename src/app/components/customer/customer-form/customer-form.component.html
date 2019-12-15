@@ -1,0 +1,17 @@
+<form> 
+    <div class="form-group"> 
+    <label for="">Name</label> 
+    <input type="text" class="form-control" placeholder="Name" [(ngModel)]="currentCustomer.name" [ngModelOptions]="{standalone: true}" /> 
+    </div> 
+    <div class="form-group"> 
+    <label for="">Country</label> 
+    <input type="text" class="form-control" placeholder="Country" [(ngModel)]="currentCustomer.country" [ngModelOptions]="{standalone: true}" /> 
+    </div> 
+    <div class="form-group"> 
+    <label for="exampleInputPassword1">Phone</label> 
+    <input type="text" class="form-control" placeholder="Phone" [(ngModel)]="currentCustomer.phone" [ngModelOptions]="{standalone: true}" /> 
+    </div> 
+    <button type="submit" class="btn btn-primary" (click)="Onsubmit()">Submit</button> 
+    <button type="submit" class="btn btn-primary">Cancel</button> 
+    </form>
+    
