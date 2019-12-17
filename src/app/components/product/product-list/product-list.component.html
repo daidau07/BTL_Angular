@@ -1,0 +1,55 @@
+<div class="container-fluid" style="background-color:#FFFFFF; border-radius: 1%;">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header card-header-rose card-header-icon">
+
+          <h4 class="card-title"><b>Quản lý sản phẩm </b></h4>
+        </div>
+        <div class="card-body">
+          <div class="horizontal">
+            <div class="pull-right">
+              <a class="btn btn-success"  [routerLink]="['/product/add']" ><i class="glyphicon glyphicon-plus"></i>Them</a>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+              <tr>
+                <th class="text-center">#</th>
+                <th class="text-center">ID</th>
+                <th>Name</th>
+                <th>So Luong</th>
+                <th>Gia</th>
+                <th>Ngày Tạo</th>
+                <th>Ngày Hết Hạn</th>
+                <th class="text-center">Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor ="let item of product">
+                <td>{{  item.id + item.id }}</td>
+                <td>{{ item.id }}</td>
+                <td>{{ item.tensanpham }}</td>
+                <td>{{ item.soluong}}</td>
+                <td>{{ item.gia }}</td>
+                <td>{{ item.ngaytao}}</td>
+                <td>{{
+                    item.ngayhethan }}</td>
+                <td>
+                  <a> <button class="btn btn-danger" [routerLink]="['/product/edit/',item.id]" >Update</button> </a>
+                  <a> <button class="btn btn-warning" (click)="onDeleteProduct(item.id)">Delete</button> </a>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

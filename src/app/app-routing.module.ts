@@ -6,12 +6,33 @@ import { CustomerComponent } from './components/customer/customer.component';
 import { InvoiceComponent } from './components/invoice/invoice.component';
 import { CustomerListComponent } from './components/customer/customer-list/customer-list.component';
 import { CustomerFormComponent } from './components/customer/customer-form/customer-form.component';
+import { ProductListComponent } from './components/product/product-list/product-list.component';
+import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
+import { ProductAddComponent } from './components/product/product-add/product-add.component';
 
 
 const routes: Routes = [
   {
     path: 'product',
-    component: ProductComponent
+    component: ProductComponent,
+    children : [
+      {
+        path: '',
+        component: ProductListComponent
+      },
+      {
+        path: 'list',
+        component: ProductListComponent
+      },
+      {
+        path: 'edit/:id',
+        component: ProductEditComponent
+      },
+      {
+        path: 'add',
+        component: ProductAddComponent
+      }
+    ]
   },
   {
     path: 'customer',

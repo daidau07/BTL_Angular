@@ -24,6 +24,10 @@ import { LayoutService } from './components/services/layout.service';
 import { CustomerListComponent } from './components/customer/customer-list/customer-list.component';
 import { CustomerFormComponent } from './components/customer/customer-form/customer-form.component';
 import { CustomerService } from './components/services/customer.service';
+import { ProductAddComponent } from './components/product/product-add/product-add.component';
+import { ProductListComponent } from './components/product/product-list/product-list.component';
+import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
+import { ProdcutService } from './components/services/product.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,10 @@ import { CustomerService } from './components/services/customer.service';
     CustomerComponent,
     InvoiceComponent,
     CustomerListComponent,
-    CustomerFormComponent
+    CustomerFormComponent,
+    ProductAddComponent,
+    ProductListComponent,
+    ProductEditComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +60,7 @@ import { CustomerService } from './components/services/customer.service';
     NbIconModule,
     NbSearchModule
   ],
-  providers: [LayoutService,CustomerService],
+  providers: [LayoutService,CustomerService,ProdcutService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
