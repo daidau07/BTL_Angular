@@ -1,8 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Product} from '../../../model/product';
-import {ProdcutService} from '../../../service/prodcut.service';
 import {Route, Router} from '@angular/router';
 import {Subscription} from 'rxjs';
+import { Product } from 'src/app/models/product.model';
+import { ProdcutService } from '../../services/product.service';
 
 
 @Component({
